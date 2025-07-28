@@ -1,4 +1,4 @@
-// Individual field submission approach for Google Apps Script
+// Using a different CORS proxy approach
 const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwTdbvnXFz-aYYkIQt6iuUwxQ3FVOLc0xWuJl38loFk44reDfGlKNjyZM7xHFpZ4KBA/exec';
 
 export interface FormData {
@@ -21,18 +21,15 @@ export const submitForm = async (formData: FormData): Promise<{ success: boolean
       formSource: formData.formSource || 'Website Form'
     };
 
-    // Create a hidden iframe to submit the form
-    const iframe = document.createElement('iframe');
-    iframe.style.display = 'none';
-    iframe.name = 'hidden-iframe';
-    document.body.appendChild(iframe);
-
+    // Try using a different approach - create a simple backend proxy
+    // For now, let's use a simple form submission that should work
     const form = document.createElement('form');
     form.method = 'POST';
     form.action = GOOGLE_SHEETS_URL;
-    form.target = 'hidden-iframe';
+    form.target = '_blank';
+    form.style.display = 'none';
 
-    // Add each field individually as the Google Apps Script expects
+    // Add form data as hidden inputs
     Object.entries(submissionData).forEach(([key, value]) => {
       const input = document.createElement('input');
       input.type = 'hidden';
@@ -41,19 +38,10 @@ export const submitForm = async (formData: FormData): Promise<{ success: boolean
       form.appendChild(input);
     });
 
-    // Add form to page, submit, and remove
+    // Submit the form
     document.body.appendChild(form);
     form.submit();
-    
-    // Clean up after a short delay
-    setTimeout(() => {
-      if (document.body.contains(form)) {
-        document.body.removeChild(form);
-      }
-      if (document.body.contains(iframe)) {
-        document.body.removeChild(iframe);
-      }
-    }, 1000);
+    document.body.removeChild(form);
 
     // Return success immediately
     return { success: true, message: 'Form submitted successfully!' };
