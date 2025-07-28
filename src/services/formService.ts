@@ -1,4 +1,6 @@
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+// Use production API URL when deployed, fallback to localhost for development
+const API_BASE_URL = import.meta.env.VITE_API_URL || 
+  (window.location.hostname === 'localhost' ? 'http://localhost:3001' : 'https://your-backend-url.onrender.com');
 
 export interface FormData {
   name: string;
