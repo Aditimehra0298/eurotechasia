@@ -21,11 +21,17 @@ export const submitForm = async (formData: FormData): Promise<{ success: boolean
       formSource: formData.formSource || 'Website Form'
     };
 
-    // Create a form and submit it directly to Google Apps Script
-    // This approach avoids CORS issues and sends data in the correct format
+    // Create a hidden iframe to submit the form without navigating away
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.name = 'hidden-iframe';
+    document.body.appendChild(iframe);
+
+    // Create a form and submit it to the hidden iframe
     const form = document.createElement('form');
     form.method = 'POST';
     form.action = GOOGLE_SHEETS_URL;
+    form.target = 'hidden-iframe';
     form.style.display = 'none';
 
     // Add each field as a hidden input
@@ -40,7 +46,16 @@ export const submitForm = async (formData: FormData): Promise<{ success: boolean
     // Submit the form
     document.body.appendChild(form);
     form.submit();
-    document.body.removeChild(form);
+    
+    // Clean up after a short delay
+    setTimeout(() => {
+      if (document.body.contains(form)) {
+        document.body.removeChild(form);
+      }
+      if (document.body.contains(iframe)) {
+        document.body.removeChild(iframe);
+      }
+    }, 1000);
 
     // Return success immediately
     return { success: true, message: 'Form submitted successfully!' };
