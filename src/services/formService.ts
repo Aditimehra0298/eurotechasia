@@ -1,4 +1,6 @@
-// Using a different CORS proxy approach
+// Form service with backend deployment ready
+// TODO: Replace with your actual backend URL once deployed to Render
+const BACKEND_URL = 'https://your-backend-url.onrender.com'; // Replace with your actual Render URL
 const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwTdbvnXFz-aYYkIQt6iuUwxQ3FVOLc0xWuJl38loFk44reDfGlKNjyZM7xHFpZ4KBA/exec';
 
 export interface FormData {
@@ -21,30 +23,51 @@ export const submitForm = async (formData: FormData): Promise<{ success: boolean
       formSource: formData.formSource || 'Website Form'
     };
 
-    // Try using a different approach - create a simple backend proxy
-    // For now, let's use a simple form submission that should work
-    const form = document.createElement('form');
-    form.method = 'POST';
-    form.action = GOOGLE_SHEETS_URL;
-    form.target = '_blank';
-    form.style.display = 'none';
+    // Check if we're in development or if backend URL is set
+    const isDevelopment = window.location.hostname === 'localhost';
+    const hasBackendUrl = BACKEND_URL !== 'https://your-backend-url.onrender.com';
 
-    // Add form data as hidden inputs
-    Object.entries(submissionData).forEach(([key, value]) => {
-      const input = document.createElement('input');
-      input.type = 'hidden';
-      input.name = key;
-      input.value = String(value);
-      form.appendChild(input);
-    });
+    if (isDevelopment || !hasBackendUrl) {
+      // Fallback: Direct form submission (current approach)
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = GOOGLE_SHEETS_URL;
+      form.target = '_blank';
+      form.style.display = 'none';
 
-    // Submit the form
-    document.body.appendChild(form);
-    form.submit();
-    document.body.removeChild(form);
+      // Add form data as hidden inputs
+      Object.entries(submissionData).forEach(([key, value]) => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = String(value);
+        form.appendChild(input);
+      });
 
-    // Return success immediately
-    return { success: true, message: 'Form submitted successfully!' };
+      // Submit the form
+      document.body.appendChild(form);
+      form.submit();
+      document.body.removeChild(form);
+
+      return { success: true, message: 'Form submitted successfully!' };
+    } else {
+      // Production: Use backend API
+      const response = await fetch(`${BACKEND_URL}/api/submit-form`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(submissionData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || 'Failed to submit form');
+      }
+
+      return result;
+    }
   } catch (error) {
     console.error('Form submission error:', error);
     throw new Error('Failed to submit form. Please try again.');
