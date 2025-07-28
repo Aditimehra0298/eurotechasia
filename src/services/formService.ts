@@ -1,6 +1,6 @@
-// Use production API URL when deployed, fallback to localhost for development
-const API_BASE_URL = import.meta.env.VITE_API_URL || 
-  (window.location.hostname === 'localhost' ? 'http://localhost:3001' : 'https://your-backend-url.onrender.com');
+// Temporary solution: Direct Google Sheets submission
+// TODO: Replace with your actual backend URL once deployed
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwTdbvnXFz-aYYkIQt6iuUwxQ3FVOLc0xWuJl38loFk44reDfGlKNjyZM7xHFpZ4KBA/exec';
 
 export interface FormData {
   name: string;
@@ -15,21 +15,27 @@ export interface FormData {
 
 export const submitForm = async (formData: FormData): Promise<{ success: boolean; message: string }> => {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/submit-form`, {
+    // Add timestamp and form source
+    const submissionData = {
+      ...formData,
+      timestamp: new Date().toISOString(),
+      formSource: formData.formSource || 'Website Form'
+    };
+
+    // Direct submission to Google Sheets (temporary solution)
+    const response = await fetch(GOOGLE_SHEETS_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(submissionData),
     });
 
-    const result = await response.json();
-
-    if (!response.ok) {
-      throw new Error(result.message || 'Failed to submit form');
+    if (response.ok) {
+      return { success: true, message: 'Form submitted successfully!' };
+    } else {
+      throw new Error('Failed to submit form');
     }
-
-    return result;
   } catch (error) {
     console.error('Form submission error:', error);
     throw new Error('Failed to submit form. Please try again.');
