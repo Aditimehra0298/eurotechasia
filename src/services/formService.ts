@@ -26,7 +26,6 @@ export const submitForm = async (formData: FormData): Promise<{ success: boolean
     const form = document.createElement('form');
     form.method = 'POST';
     form.action = GOOGLE_SHEETS_URL;
-    form.target = '_blank'; // Open in new tab to avoid navigation
     form.style.display = 'none';
 
     // Add each field as a hidden input
