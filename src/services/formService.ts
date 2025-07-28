@@ -1,5 +1,5 @@
 // Form service that sends data in the correct format for Google Apps Script
-const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwTdbvnXFz-aYYkIQt6iuUwxQ3FVOLc0xWuJl38loFk44reDfGlKNjyZM7xHFpZ4KBA/exec';
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbz02lydQSj2tNOl_2rXDxk00u1h8irkH-JkDjLml7LyFD00wvxwBu0jPbSDdXubndt9/exec';
 
 export interface FormData {
   name: string;
