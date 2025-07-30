@@ -229,6 +229,8 @@ const Hero = ({
       <div className="fixed top-24 left-0 right-0 z-40 bg-red-600 text-white py-3 px-4 overflow-hidden">
         <div className="animate-marquee whitespace-nowrap">
           <span className="font-bold text-lg">⚠️ BEWARE: 90% of CE Certificates issued in India are FAKE!</span>
+          <span className="font-bold text-lg ml-8">⚠️ BEWARE: 90% of CE Certificates issued in India are FAKE!</span>
+          <span className="font-bold text-lg ml-8">⚠️ BEWARE: 90% of CE Certificates issued in India are FAKE!</span>
         </div>
       </div>
       
