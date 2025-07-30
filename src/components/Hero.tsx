@@ -225,6 +225,13 @@ const Hero = ({
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 overflow-hidden pt-16"> {/* Reduced pt-24 to pt-16 to reduce gap */}
+      {/* Mobile Warning Banner */}
+      <div className="md:hidden fixed top-16 left-0 right-0 z-40 bg-red-600 text-white py-3 px-4 overflow-hidden">
+        <div className="animate-marquee whitespace-nowrap">
+          <span className="font-bold text-lg">⚠️ BEWARE: 90% of CE Certificates issued in India are FAKE!</span>
+        </div>
+      </div>
+      
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%22 fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')] opacity-30"></div>
       
@@ -275,15 +282,6 @@ const Hero = ({
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                 <span className="text-blue-100">Legal Protection</span>
-              </div>
-            </div>
-
-            {/* Warning Banner - Mobile Only */}
-            <div className="md:hidden">
-              <div className="bg-red-600/20 border-2 border-red-500 rounded-lg p-3 overflow-hidden">
-                <div className="animate-scroll-text whitespace-nowrap text-red-200 font-semibold text-sm">
-                  ⚠️ Beware: 90% of CE Certificates issued in India are Fake ⚠️ Beware: 90% of CE Certificates issued in India are Fake ⚠️ Beware: 90% of CE Certificates issued in India are Fake ⚠️ Beware: 90% of CE Certificates issued in India are Fake ⚠️ Beware: 90% of CE Certificates issued in India are Fake ⚠️ Beware: 90% of CE Certificates issued in India are Fake ⚠️ Beware: 90% of CE Certificates issued in India are Fake ⚠️ Beware: 90% of CE Certificates issued in India are Fake ⚠️ Beware: 90% of CE Certificates issued in India are Fake ⚠️ Beware: 90% of CE Certificates issued in India are Fake
-                </div>
               </div>
             </div>
 
@@ -375,13 +373,17 @@ const Hero = ({
             }
           }
           
-          @keyframes scrollText {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
+          @keyframes marquee {
+            0% {
+              transform: translateX(100%);
+            }
+            100% {
+              transform: translateX(-100%);
+            }
           }
           
-          .animate-scroll-text {
-            animation: scrollText 20s linear infinite;
+          .animate-marquee {
+            animation: marquee 15s linear infinite;
           }
         `
       }} />
