@@ -226,7 +226,7 @@ const Hero = ({
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 overflow-hidden pt-16"> {/* Reduced pt-24 to pt-16 to reduce gap */}
       {/* Mobile Warning Banner */}
-      <div className="md:hidden fixed top-16 left-0 right-0 z-40 bg-red-600 text-white py-3 px-4 overflow-hidden">
+      <div className="md:hidden fixed top-24 left-0 right-0 z-40 bg-red-600 text-white py-3 px-4 overflow-hidden">
         <div className="animate-marquee whitespace-nowrap">
           <span className="font-bold text-lg">⚠️ BEWARE: 90% of CE Certificates issued in India are FAKE!</span>
         </div>
@@ -235,7 +235,7 @@ const Hero = ({
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%22 fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')] opacity-30"></div>
       
-      <div className="relative z-10 container mx-auto px-4 py-12 lg:py-20 md:pt-20 pt-24">
+      <div className="relative z-10 container mx-auto px-4 py-12 lg:py-20 md:pt-20 pt-32">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[80vh]">
           
           {/* Left Side - Content */}
