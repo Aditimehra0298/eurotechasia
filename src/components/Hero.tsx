@@ -238,6 +238,7 @@ const Hero = ({
                 <Shield className="w-4 h-4 mr-2 text-blue-300" />
                 <span className="text-sm font-medium text-blue-200">European Market Compliance</span>
               </div>
+
               <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 rounded-full border border-blue-400/30 backdrop-blur-sm">
                 <Shield className="w-4 h-4 mr-2 text-blue-300" />
                 <span className="text-sm font-medium text-blue-200">NANDO Approved Notified Bodies</span>
@@ -277,32 +278,15 @@ const Hero = ({
               </div>
             </div>
 
-            {/* NANDO Approved Notified Bodies */}
-            <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-xl p-6 border border-blue-400/30 backdrop-blur-sm">
-              <div className="flex items-center justify-center mb-4">
-                <div className="bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full p-3 mr-3">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white">NANDO Approved Notified Bodies</h3>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                <div className="bg-white/10 rounded-lg p-4 backdrop-blur-sm">
-                  <div className="text-2xl font-bold text-blue-300 mb-2">200+</div>
-                  <div className="text-blue-100 text-sm">Approved Bodies</div>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4 backdrop-blur-sm">
-                  <div className="text-2xl font-bold text-cyan-300 mb-2">100%</div>
-                  <div className="text-blue-100 text-sm">EU Recognized</div>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4 backdrop-blur-sm">
-                  <div className="text-2xl font-bold text-green-300 mb-2">24/7</div>
-                  <div className="text-blue-100 text-sm">Support Available</div>
+            {/* Warning Banner - Mobile Only */}
+            <div className="md:hidden">
+              <div className="bg-red-600/20 border-2 border-red-500 rounded-lg p-3 overflow-hidden">
+                <div className="animate-scroll-text whitespace-nowrap text-red-200 font-semibold text-sm">
+                  ⚠️ Beware: 90% of CE Certificates issued in India are Fake ⚠️ Beware: 90% of CE Certificates issued in India are Fake ⚠️ Beware: 90% of CE Certificates issued in India are Fake ⚠️ Beware: 90% of CE Certificates issued in India are Fake ⚠️ Beware: 90% of CE Certificates issued in India are Fake ⚠️ Beware: 90% of CE Certificates issued in India are Fake ⚠️ Beware: 90% of CE Certificates issued in India are Fake ⚠️ Beware: 90% of CE Certificates issued in India are Fake ⚠️ Beware: 90% of CE Certificates issued in India are Fake ⚠️ Beware: 90% of CE Certificates issued in India are Fake
                 </div>
               </div>
-              <p className="text-blue-200 text-center mt-4 text-sm">
-                Partner with officially recognized notified bodies for guaranteed compliance and market access
-              </p>
             </div>
+
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -389,6 +373,15 @@ const Hero = ({
             75% {
               d: path("M0,68L48,73.3C96,78,192,88,288,83C384,78,480,58,576,53C672,48,768,58,864,69C960,80,1056,90,1152,85C1248,80,1344,60,1392,49.7L1440,39L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z");
             }
+          }
+          
+          @keyframes scrollText {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+          }
+          
+          .animate-scroll-text {
+            animation: scrollText 20s linear infinite;
           }
         `
       }} />
