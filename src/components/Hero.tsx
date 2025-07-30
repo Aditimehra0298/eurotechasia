@@ -273,6 +273,33 @@ const Hero = ({
               </div>
             </div>
 
+            {/* NANDO Approved Notified Bodies */}
+            <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-xl p-6 border border-blue-400/30 backdrop-blur-sm">
+              <div className="flex items-center justify-center mb-4">
+                <div className="bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full p-3 mr-3">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white">NANDO Approved Notified Bodies</h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                <div className="bg-white/10 rounded-lg p-4 backdrop-blur-sm">
+                  <div className="text-2xl font-bold text-blue-300 mb-2">200+</div>
+                  <div className="text-blue-100 text-sm">Approved Bodies</div>
+                </div>
+                <div className="bg-white/10 rounded-lg p-4 backdrop-blur-sm">
+                  <div className="text-2xl font-bold text-cyan-300 mb-2">100%</div>
+                  <div className="text-blue-100 text-sm">EU Recognized</div>
+                </div>
+                <div className="bg-white/10 rounded-lg p-4 backdrop-blur-sm">
+                  <div className="text-2xl font-bold text-green-300 mb-2">24/7</div>
+                  <div className="text-blue-100 text-sm">Support Available</div>
+                </div>
+              </div>
+              <p className="text-blue-200 text-center mt-4 text-sm">
+                Partner with officially recognized notified bodies for guaranteed compliance and market access
+              </p>
+            </div>
+
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <button 
