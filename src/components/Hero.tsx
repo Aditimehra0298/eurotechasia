@@ -238,6 +238,10 @@ const Hero = ({
                 <Shield className="w-4 h-4 mr-2 text-blue-300" />
                 <span className="text-sm font-medium text-blue-200">European Market Compliance</span>
               </div>
+              <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 rounded-full border border-blue-400/30 backdrop-blur-sm">
+                <Shield className="w-4 h-4 mr-2 text-blue-300" />
+                <span className="text-sm font-medium text-blue-200">NANDO Approved Notified Bodies</span>
+              </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 Get Your Products{' '}
@@ -326,38 +330,19 @@ const Hero = ({
               <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm border border-white/10">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl"></div>
                 <div className="relative aspect-video">
-                  {/* Professional CE Mark Image */}
-                  <div className="w-full h-full bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center relative overflow-hidden">
-                    {/* Animated Background Pattern */}
-                    <div className="absolute inset-0 opacity-20">
-                      <div className="absolute top-4 left-4 w-8 h-8 border-2 border-white/30 rounded-full animate-pulse"></div>
-                      <div className="absolute top-12 right-8 w-6 h-6 border-2 border-white/30 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-                      <div className="absolute bottom-8 left-12 w-10 h-10 border-2 border-white/30 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
-                      <div className="absolute bottom-16 right-4 w-4 h-4 border-2 border-white/30 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
-                    </div>
-                    
-                    {/* CE Mark Logo and Text */}
-                    <div className="text-center z-10">
-                      <div className="bg-white/20 backdrop-blur-sm rounded-full p-6 mb-4 inline-block">
-                        <div className="text-4xl font-bold text-white mb-2">CE</div>
-                        <div className="text-sm text-blue-100">Conformité Européenne</div>
-                      </div>
-                      <div className="text-white text-lg font-semibold">
-                        European Market Access
-                      </div>
-                      <div className="text-blue-200 text-sm mt-2">
-                        Quality • Safety • Compliance
-                      </div>
-                    </div>
-                    
-                    {/* Floating Elements */}
-                    <div className="absolute top-4 right-4 bg-white/10 backdrop-blur-sm rounded-lg p-2">
-                      <div className="text-xs text-white">✓ EU Approved</div>
-                    </div>
-                    <div className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-sm rounded-lg p-2">
-                      <div className="text-xs text-white">✓ 30+ Countries</div>
-                    </div>
-                  </div>
+                  <video
+                    className="w-full h-full object-cover rounded-2xl"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  >
+                    <source
+                      src="https://videos.openai.com/vg-assets/assets%2Ftask_01k0xw4p5teym9dyp9606qgsjg%2Ftask_01k0xw4p5teym9dyp9606qgsjg_genid_c81dda8e-33d9-42e5-a414-40817df24b6f_25_07_24_09_27_199058%2Fvideos%2F00000_393091282%2Fmd.mp4?st=2025-07-30T08%3A49%3A40Z&se=2025-08-05T09%3A49%3A40Z&sks=b&skt=2025-07-30T08%3A49%3A40Z&ske=2025-08-05T09%3A49%3A40Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=acFNytp%2FDtGWYAjVA9b%2FLSl%2F8O%2BE2Krab4Qu0Yz56fU%3D&az=oaivgprodscus"
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
                 
                 {/* Video Overlay */}
