@@ -37,7 +37,7 @@ function App() {
       
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/919056544487"
+        href="https://wa.me/919056742781"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 group"
@@ -57,7 +57,7 @@ function App() {
 
       {/* Floating Phone Button */}
       <a
-        href="tel:+919056544487"
+        href="tel:+919056742781"
         className="fixed bottom-20 right-4 sm:bottom-24 sm:right-6 z-50 group"
         aria-label="Call us"
       >
