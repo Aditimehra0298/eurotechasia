@@ -36,7 +36,7 @@ const WhyCEMark = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-purple-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -56,11 +56,11 @@ const WhyCEMark = () => {
                 className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 min-w-[280px] max-w-[280px]"
               >
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-[#392f6f] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-[#392f6f] transition-colors">
                   {benefit.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-sm">
@@ -79,11 +79,11 @@ const WhyCEMark = () => {
               className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
             >
               <div className="flex items-center mb-6">
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 bg-[#392f6f] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <benefit.icon className="w-7 h-7 text-white" />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-[#392f6f] transition-colors">
                 {benefit.title}
               </h3>
               <p className="text-gray-600 leading-relaxed">
@@ -93,9 +93,9 @@ const WhyCEMark = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl p-8 text-white text-center">
+        <div className="mt-16 bg-[#392f6f] rounded-2xl p-8 text-white text-center">
           <h3 className="text-2xl font-bold mb-4">Important Note</h3>
-          <p className="text-blue-100 text-lg max-w-4xl mx-auto">
+          <p className="text-purple-100 text-lg max-w-4xl mx-auto">
             Some products, like food and cosmetics, are exempt from CE marking but have other regulatory requirements. 
             Our experts can guide you through the specific compliance needs for your product category.
           </p>

@@ -22,10 +22,10 @@ const Footer = () => {
               and achieve certification across all industries.
             </p>
             <div className="flex space-x-4">
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors cursor-pointer">
+              <div className="w-10 h-10 bg-[#392f6f] rounded-lg flex items-center justify-center hover:bg-[#2a1f5a] transition-colors cursor-pointer">
                 <Globe className="w-5 h-5" />
               </div>
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors cursor-pointer">
+              <div className="w-10 h-10 bg-[#392f6f] rounded-lg flex items-center justify-center hover:bg-[#2a1f5a] transition-colors cursor-pointer">
                 <Mail className="w-5 h-5" />
               </div>
             </div>
@@ -49,17 +49,17 @@ const Footer = () => {
             <h4 className="text-xl font-bold mb-6">Contact Us</h4>
             <div className="space-y-4">
               <div className="flex items-center">
-                <Mail className="w-5 h-5 mr-3 text-blue-400" />
+                <Mail className="w-5 h-5 mr-3 text-[#392f6f]" />
                 <a href="mailto:trg@eurotechworld.net" className="text-gray-300 hover:text-white transition-colors">
                   n.khatri@eurotechworld.net
                 </a>
               </div>
               <div className="flex items-center">
-                <Phone className="w-5 h-5 mr-3 text-blue-400" />
+                <Phone className="w-5 h-5 mr-3 text-[#392f6f]" />
                 <span className="text-gray-300">+9198712 31133</span>
               </div>
               <div className="flex items-center">
-                <MapPin className="w-5 h-5 mr-3 text-blue-400" />
+                <MapPin className="w-5 h-5 mr-3 text-[#392f6f]" />
                 <span className="text-gray-300">European Union</span>
               </div>
             </div>

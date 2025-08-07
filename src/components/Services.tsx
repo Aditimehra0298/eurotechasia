@@ -86,7 +86,7 @@ const Services = () => {
     <section 
       className="py-20 relative overflow-hidden"
       style={{
-        backgroundImage: 'url("https://www.emitech.fr/sites/groupe-emitech.fr/files/marquage_ce.jpg")',
+        backgroundImage: 'url("/image.png"), url("https://www.emitech.fr/sites/groupe-emitech.fr/files/marquage_ce.jpg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -112,14 +112,14 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-gradient-to-br from-gray-50 to-blue-50 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+              className="group bg-gradient-to-br from-gray-50 to-purple-50 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
             >
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-[#392f6f] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#392f6f] transition-colors">
                 {service.title}
               </h3>
               <p className="text-gray-600 leading-relaxed text-lg">
@@ -130,20 +130,20 @@ const Services = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-12 text-white max-w-4xl mx-auto">
+          <div className="bg-[#392f6f] rounded-2xl p-12 text-white max-w-4xl mx-auto">
             <h3 className="text-3xl font-bold mb-6">Ready to Start Your CE Certification Journey?</h3>
-            <p className="text-blue-100 text-xl mb-8 leading-relaxed">
+            <p className="text-purple-100 text-xl mb-8 leading-relaxed">
               Our experts are ready to guide you through every step of the certification process, 
               ensuring compliance and market access for your products.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
                 onClick={() => setIsContactModalOpen(true)}
-                className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-50 transition-colors"
+                className="bg-white text-[#392f6f] px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-50 transition-colors"
               >
                 Get Free Consultation
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-[#392f6f] transition-colors">
                 Download Guide
               </button>
             </div>
@@ -158,7 +158,7 @@ const Services = () => {
           <div 
             className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative"
             style={{
-              backgroundImage: 'url("https://www.kamelo.com.au/cdn/shop/articles/CE_999x.jpg?v=1698390665")',
+              backgroundImage: 'url("/image.png"), url("https://www.kamelo.com.au/cdn/shop/articles/CE_999x.jpg?v=1698390665")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat'
@@ -203,7 +203,7 @@ const Services = () => {
                       setShowSuccessMessage(false);
                       setIsContactModalOpen(false);
                     }}
-                    className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors duration-300"
+                    className="bg-[#392f6f] hover:bg-[#2a1f5a] text-white px-6 py-2 rounded-lg font-semibold transition-colors duration-300"
                   >
                     Close
                   </button>
@@ -224,7 +224,7 @@ const Services = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#392f6f] focus:border-transparent"
                     placeholder="Your Full Name"
                   />
                 </div>
@@ -240,7 +240,7 @@ const Services = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#392f6f] focus:border-transparent"
                     placeholder="+1 (555) 123-4567"
                   />
                 </div>
@@ -257,7 +257,7 @@ const Services = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#392f6f] focus:border-transparent"
                     placeholder="you@example.com"
                   />
                 </div>
@@ -273,7 +273,7 @@ const Services = () => {
                     value={formData.industry}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#392f6f] focus:border-transparent"
                   >
                     <option value="">Select an Industry</option>
                     <option value="medical-devices">CE for Medical Devices</option>
@@ -297,7 +297,7 @@ const Services = () => {
                     value={formData.companyName}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#392f6f] focus:border-transparent"
                     placeholder="Your Company Name"
                   />
                 </div>
@@ -314,7 +314,7 @@ const Services = () => {
                     value={formData.location}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#392f6f] focus:border-transparent"
                     placeholder="City, Country"
                   />
                 </div>
@@ -330,7 +330,7 @@ const Services = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#392f6f] focus:border-transparent resize-none"
                     placeholder="Enter your message here..."
                   />
                 </div>
@@ -338,7 +338,7 @@ const Services = () => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 px-6 rounded-lg font-bold text-lg transition-all duration-300 transform hover:-translate-y-0.5"
+                  className="w-full bg-[#392f6f] hover:bg-[#2a1f5a] text-white py-4 px-6 rounded-lg font-bold text-lg transition-all duration-300 transform hover:-translate-y-0.5"
                 >
                   Submit Inquiry
                 </button>
