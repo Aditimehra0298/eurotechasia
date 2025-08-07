@@ -1,30 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Phone } from 'lucide-react';
 import Hero from './components/Hero';
 import WhyCEMark from './components/WhyCEMark';
 import IndustryGrid from './components/IndustryGrid';
 import Benefits from './components/Benefits';
 import Services from './components/Services';
-import Dashboard from './components/Dashboard';
 import Footer from './components/Footer';
 import ThankYouPage from './components/ThankYouPage';
 
 function App() {
-  const [isOnline, setIsOnline] = useState(navigator.onLine);
-
-  useEffect(() => {
-    const handleOnline = () => setIsOnline(true);
-    const handleOffline = () => setIsOnline(false);
-
-    window.addEventListener('online', handleOnline);
-    window.addEventListener('offline', handleOffline);
-
-    return () => {
-      window.removeEventListener('online', handleOnline);
-      window.removeEventListener('offline', handleOffline);
-    };
-  }, []);
-
   // Check if we're on the thank you page
   const isThankYouPage = window.location.pathname === '/thank-you';
 
@@ -34,15 +18,6 @@ function App() {
 
   return (
     <div className="min-h-screen">
-      {/* Offline Notification */}
-      {!isOnline && (
-        <div className="fixed top-0 left-0 right-0 bg-yellow-500 text-white text-center py-2 z-50">
-          <span className="text-sm font-medium">
-            You're currently offline. Some content may not load properly.
-          </span>
-        </div>
-      )}
-      
       <Hero />
       <section id="why-ce-mark">
         <WhyCEMark />
@@ -56,16 +31,13 @@ function App() {
       <section id="services">
         <Services />
       </section>
-      <section id="dashboard">
-        <Dashboard />
-      </section>
       <section id="contact">
         <Footer />
       </section>
       
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/919056742781"
+        href="https://wa.me/919056544487"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 group"
@@ -85,7 +57,7 @@ function App() {
 
       {/* Floating Phone Button */}
       <a
-        href="tel:+919056742781"
+        href="tel:+919056544487"
         className="fixed bottom-20 right-4 sm:bottom-24 sm:right-6 z-50 group"
         aria-label="Call us"
       >

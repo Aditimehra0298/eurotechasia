@@ -26,7 +26,7 @@ const Header = ({ onOpenContactModal }: { onOpenContactModal: () => void }) => {
           <img 
             src="/image.png" 
             alt="CEMark Pro Logo" 
-            className="h-16 w-auto"
+            className="h-12 w-auto"
           />
         </div>
 
@@ -34,31 +34,31 @@ const Header = ({ onOpenContactModal }: { onOpenContactModal: () => void }) => {
         <nav className="hidden md:flex space-x-8">
           <button 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="text-gray-700 hover:text-[#392f6f] transition-colors duration-300 relative group text-lg font-medium"
+            className="text-gray-700 hover:text-blue-600 transition-colors duration-300 relative group text-lg font-medium"
           >
             Home
-            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#392f6f] group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></span>
           </button>
           <button 
             onClick={() => scrollToSection('services')}
-            className="text-gray-700 hover:text-[#392f6f] transition-colors duration-300 relative group text-lg font-medium"
+            className="text-gray-700 hover:text-blue-600 transition-colors duration-300 relative group text-lg font-medium"
           >
             Services
-            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#392f6f] group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></span>
           </button>
           <button 
             onClick={() => scrollToSection('why-ce-mark')}
-            className="text-gray-700 hover:text-[#392f6f] transition-colors duration-300 relative group text-lg font-medium"
+            className="text-gray-700 hover:text-blue-600 transition-colors duration-300 relative group text-lg font-medium"
           >
             Why CE Mark
-            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#392f6f] group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></span>
           </button>
           <button 
             onClick={() => scrollToSection('contact')}
-            className="text-gray-700 hover:text-[#392f6f] transition-colors duration-300 relative group text-lg font-medium"
+            className="text-gray-700 hover:text-blue-600 transition-colors duration-300 relative group text-lg font-medium"
           >
             Contact
-            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#392f6f] group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></span>
           </button>
         </nav>
 
@@ -66,7 +66,7 @@ const Header = ({ onOpenContactModal }: { onOpenContactModal: () => void }) => {
         <div className="hidden md:block">
           <button 
             onClick={onOpenContactModal}
-            className="group bg-[#392f6f] hover:bg-[#2a1f5a] text-white px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center"
+            className="group bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center"
           >
             Get Started
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -90,31 +90,31 @@ const Header = ({ onOpenContactModal }: { onOpenContactModal: () => void }) => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 setIsMenuOpen(false);
               }}
-              className="text-gray-700 hover:text-[#392f6f] text-xl py-3 transition-colors duration-300 font-medium"
+              className="text-gray-700 hover:text-blue-600 text-xl py-3 transition-colors duration-300 font-medium"
             >
               Home
             </button>
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-gray-700 hover:text-[#392f6f] text-xl py-3 transition-colors duration-300 font-medium"
+              className="text-gray-700 hover:text-blue-600 text-xl py-3 transition-colors duration-300 font-medium"
             >
               Services
             </button>
             <button 
               onClick={() => scrollToSection('why-ce-mark')}
-              className="text-gray-700 hover:text-[#392f6f] text-xl py-3 transition-colors duration-300 font-medium"
+              className="text-gray-700 hover:text-blue-600 text-xl py-3 transition-colors duration-300 font-medium"
             >
               Why CE Mark
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-gray-700 hover:text-[#392f6f] text-xl py-3 transition-colors duration-300 font-medium"
+              className="text-gray-700 hover:text-blue-600 text-xl py-3 transition-colors duration-300 font-medium"
             >
               Contact
             </button>
             <button 
               onClick={onOpenContactModal}
-              className="group bg-[#392f6f] hover:bg-[#2a1f5a] text-white px-8 py-4 rounded-full font-semibold text-xl mt-6 transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center mx-auto"
+              className="group bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 rounded-full font-semibold text-xl mt-6 transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center mx-auto"
             >
               Get Started
               <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
@@ -292,14 +292,14 @@ const Hero = ({
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <button 
                 onClick={() => setIsContactModalOpen(true)}
-                className="group bg-[#392f6f] hover:bg-[#2a1f5a] text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center"
+                className="group bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center"
               >
                 Get a Free Quote
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button 
                 onClick={() => setIsContactGridOpen(true)}
-                className="border-2 border-[#392f6f] text-[#392f6f] hover:bg-[#392f6f] hover:text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center justify-center"
+                className="border-2 border-blue-300 text-blue-100 hover:bg-blue-300 hover:text-blue-900 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center justify-center"
               >
                 <Globe className="mr-2 w-5 h-5" />
                 Contact Us Today
@@ -320,14 +320,9 @@ const Hero = ({
                     muted
                     loop
                     playsInline
-                    onError={(e) => {
-                      console.warn('Video failed to load, using fallback');
-                      const videoElement = e.target as HTMLVideoElement;
-                      videoElement.style.display = 'none';
-                    }}
                   >
                     <source
-                      src="/20250724_1458_European Flag Waving_simple_compose_01k0xw5kyxeyebk53rcxtwgvp5 (2).mp4"
+                      src="https://videos.openai.com/vg-assets/assets%2Ftask_01k0xw4p5teym9dyp9606qgsjg%2Ftask_01k0xw4p5teym9dyp9606qgsjg_genid_c81dda8e-33d9-42e5-a414-40817df24b6f_25_07_24_09_27_199058%2Fvideos%2F00000_393091282%2Fmd.mp4?st=2025-07-30T08%3A49%3A40Z&se=2025-08-05T09%3A49%3A40Z&sks=b&skt=2025-07-30T08%3A49%3A40Z&ske=2025-08-05T09%3A49%3A40Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=acFNytp%2FDtGWYAjVA9b%2FLSl%2F8O%2BE2Krab4Qu0Yz56fU%3D&az=oaivgprodscus"
                       type="video/mp4"
                     />
                     Your browser does not support the video tag.
@@ -401,7 +396,7 @@ const Hero = ({
           <div 
             className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto relative"
             style={{
-              backgroundImage: 'url("/image.png"), url("https://www.kamelo.com.au/cdn/shop/articles/CE_999x.jpg?v=1698390665")',
+              backgroundImage: 'url("https://www.kamelo.com.au/cdn/shop/articles/CE_999x.jpg?v=1698390665")',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat'
@@ -445,7 +440,7 @@ const Hero = ({
                       setShowSuccessMessage(false);
                       setIsContactModalOpen(false);
                     }}
-                    className="bg-[#392f6f] hover:bg-[#2a1f5a] text-white px-6 py-2 rounded-lg font-semibold transition-colors duration-300"
+                    className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors duration-300"
                   >
                     Close
                   </button>
@@ -580,7 +575,7 @@ const Hero = ({
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-[#392f6f] hover:bg-[#2a1f5a] text-white py-3 sm:py-4 px-6 rounded-lg font-bold text-base sm:text-lg transition-all duration-300 transform hover:-translate-y-0.5"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 sm:py-4 px-6 rounded-lg font-bold text-base sm:text-lg transition-all duration-300 transform hover:-translate-y-0.5"
                 >
                   Submit Inquiry
                 </button>

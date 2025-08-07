@@ -184,7 +184,7 @@ const IndustryGrid = () => {
         <div className="container mx-auto px-4">
           <button
             onClick={() => setSelectedIndustry(null)}
-            className="flex items-center text-[#392f6f] hover:text-[#2a1f5a] mb-8 transition-colors group"
+            className="flex items-center text-blue-600 hover:text-blue-800 mb-8 transition-colors group"
           >
             <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
             Back to Industries
@@ -233,15 +233,15 @@ const IndustryGrid = () => {
               </div>
 
               {/* Applicable Directives */}
-              <div className="bg-purple-50 rounded-2xl p-8">
+              <div className="bg-blue-50 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                  <FileText className="w-6 h-6 mr-3 text-[#392f6f]" />
+                  <FileText className="w-6 h-6 mr-3 text-blue-500" />
                   Applicable Directives
                 </h3>
                 <div className="space-y-3">
                   {selectedIndustry.directives.map((directive, index) => (
                     <div key={index} className="flex items-center p-3 bg-white rounded-lg">
-                      <Award className="w-5 h-5 mr-3 text-[#392f6f]" />
+                      <Award className="w-5 h-5 mr-3 text-blue-500" />
                       <span className="text-gray-700 font-medium">{directive}</span>
                     </div>
                   ))}
@@ -250,15 +250,15 @@ const IndustryGrid = () => {
             </div>
 
             {/* Services Provided */}
-            <div className="mt-12 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-8">
+            <div className="mt-12 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-8 flex items-center">
-                <TestTube className="w-6 h-6 mr-3 text-[#392f6f]" />
+                <TestTube className="w-6 h-6 mr-3 text-indigo-500" />
                 Services Provided
               </h3>
               <div className="grid md:grid-cols-2 gap-6">
                 {selectedIndustry.services.map((service, index) => (
                   <div key={index} className="flex items-start p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                    <div className="w-6 h-6 bg-[#392f6f] rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                    <div className="w-6 h-6 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
                       <CheckCircle className="w-4 h-4 text-white" />
                     </div>
                     <span className="text-gray-700 leading-relaxed">{service}</span>
@@ -269,16 +269,16 @@ const IndustryGrid = () => {
 
             {/* CTA */}
             <div className="mt-12 text-center">
-              <div className="bg-[#392f6f] rounded-2xl p-8 text-white">
+              <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
                 <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
-                <p className="text-purple-100 mb-6 max-w-2xl mx-auto">
+                <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
                   Contact us for tailored CE certification services for your {selectedIndustry.name.toLowerCase()} products.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-white text-[#392f6f] px-8 py-3 rounded-xl font-semibold hover:bg-purple-50 transition-colors">
+                  <button className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold hover:bg-blue-50 transition-colors">
                     Get Free Quote
                   </button>
-                  <button className="border-2 border-white text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#392f6f] transition-colors">
+                  <button className="border-2 border-white text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                     Contact Expert
                   </button>
                 </div>
@@ -331,13 +331,13 @@ const IndustryGrid = () => {
                     </div>
                   )}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-[#392f6f] transition-all duration-300 group-hover:scale-105">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-all duration-300 group-hover:scale-105">
                   {industry.name}
                 </h3>
                 <p className="text-gray-600 leading-relaxed mb-6 group-hover:text-gray-700 transition-colors duration-300">
                   {industry.description}
                 </p>
-                <div className="flex items-center text-[#392f6f] font-medium group-hover:text-[#2a1f5a] transition-all duration-300 group-hover:scale-105">
+                <div className="flex items-center text-blue-600 font-medium group-hover:text-blue-800 transition-all duration-300 group-hover:scale-105">
                   <span>Learn More</span>
                   <ArrowLeft className="w-4 h-4 ml-2 rotate-180 group-hover:translate-x-2 transition-transform duration-300" />
                 </div>
