@@ -322,7 +322,7 @@ const Hero = ({
                     playsInline
                   >
                     <source
-                      src="https://videos.openai.com/vg-assets/assets%2Ftask_01k0xw4p5teym9dyp9606qgsjg%2Ftask_01k0xw4p5teym9dyp9606qgsjg_genid_c81dda8e-33d9-42e5-a414-40817df24b6f_25_07_24_09_27_199058%2Fvideos%2F00000_393091282%2Fmd.mp4?st=2025-07-30T08%3A49%3A40Z&se=2025-08-05T09%3A49%3A40Z&sks=b&skt=2025-07-30T08%3A49%3A40Z&ske=2025-08-05T09%3A49%3A40Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=acFNytp%2FDtGWYAjVA9b%2FLSl%2F8O%2BE2Krab4Qu0Yz56fU%3D&az=oaivgprodscus"
+                      src="/20250724_1458_European Flag Waving_simple_compose_01k0xw5kyxeyebk53rcxtwgvp5 (2).mp4"
                       type="video/mp4"
                     />
                     Your browser does not support the video tag.
