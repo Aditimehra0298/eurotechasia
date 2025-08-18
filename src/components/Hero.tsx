@@ -314,15 +314,54 @@ const Hero = ({
               <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm border border-white/10">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl"></div>
                 <div className="relative aspect-video">
+                  {/* Loading Spinner */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-blue-900/50 rounded-2xl z-10">
+                    <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-white"></div>
+                  </div>
+                  
                   <video
                     className="w-full h-full object-cover rounded-2xl"
                     autoPlay
                     muted
                     loop
                     playsInline
+                    poster="/image.png"
+                    preload="metadata"
+                    onLoadStart={() => {
+                      // Hide loading spinner when video starts loading
+                      const spinner = document.querySelector('.animate-spin');
+                      if (spinner) {
+                        (spinner.parentElement as HTMLElement).style.display = 'none';
+                      }
+                    }}
+                    onCanPlay={() => {
+                      // Hide loading spinner when video can play
+                      const spinner = document.querySelector('.animate-spin');
+                      if (spinner) {
+                        (spinner.parentElement as HTMLElement).style.display = 'none';
+                      }
+                    }}
+                    onError={(e) => {
+                      console.error('Video failed to load:', e);
+                      // Hide loading spinner
+                      const spinner = document.querySelector('.animate-spin');
+                      if (spinner) {
+                        (spinner.parentElement as HTMLElement).style.display = 'none';
+                      }
+                      // Fallback to image if video fails
+                      const videoElement = e.target as HTMLVideoElement;
+                      if (videoElement.parentElement) {
+                        const img = document.createElement('img');
+                        img.src = '/image.png';
+                        img.alt = 'CE Mark Certification';
+                        img.className = 'w-full h-full object-cover rounded-2xl';
+                        videoElement.parentElement.appendChild(img);
+                        videoElement.style.display = 'none';
+                      }
+                    }}
                   >
                     <source
-                      src="/20250724_1458_European Flag Waving_simple_compose_01k0xw5kyxeyebk53rcxtwgvp5 (2).mp4"
+                      src="/hero-video.mp4"
                       type="video/mp4"
                     />
                     Your browser does not support the video tag.

@@ -43,6 +43,21 @@
     Content-Type = "text/html"
 
 [[headers]]
+  for = "/*.mp4"
+  [headers.values]
+    Content-Type = "video/mp4"
+
+[[headers]]
+  for = "/*.webm"
+  [headers.values]
+    Content-Type = "video/webm"
+
+[[headers]]
+  for = "/*.ogg"
+  [headers.values]
+    Content-Type = "video/ogg"
+
+[[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
